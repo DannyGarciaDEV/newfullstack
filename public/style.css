@@ -1,0 +1,158 @@
+*{
+  box-sizing: border-box;
+}
+img{
+  width: 20%;
+  height: 40%;
+}
+
+.containers {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+
+.btn-default {
+  background-color: #f47d7d;
+  border-color: #ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-default:hover {
+  background-color: #f5b3b3;
+  border-color: #999;
+  color: #333;
+}
+
+
+
+
+
+body {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 26px;
+    padding: 3px;
+    background-color: #f8eaaa;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.inpuPro[type="text"],
+.inpuPro[type="date"],
+.inpuPro[type="time"] {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+button[type="submit"] {
+  background-color: #fafdb9;
+  border: none;
+  color: rgb(254, 3, 20);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #ee957a;
+}
+
+button[type="submit"]:active {
+  background-color: #ebee7a;
+  transform: translateY(1px);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #f5f5f5;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+li:hover {
+  background-color: #6b5b63;
+}
+
+li span {
+  cursor: pointer;
+}
+
+.fa-trash {
+  color: red;
+}
+
+strong{
+  color: #bea31b;
+  text-shadow: #b7763d;
+  font-size: 20px;
+}
+
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+
+p{
+  color: black;
+  background-color: #ee957a;
+  font-size: 20px;
+}
+
+span{
+  color: rgb(9, 9, 9);
+
+  text-shadow: 2px #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}

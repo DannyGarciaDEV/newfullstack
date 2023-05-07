@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <title>Reminder</title>
+   
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="containers">
+
+   
+       
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        
+       
+        <span>Today is <%= currentDate %></span>
+       
+        <span id="current-time"><%= currentTime %></span>
+     
+   
+</div>
+        <!-- LOCAL INFORMATION -->
+       
+
+<div class="container">
+       
+        <h1>Hello <stron ><%= user.local.email %> </stron>create a Reminders</h1>
+        <form method="POST" action="/reminders" onsubmit="createReminderAlert()">
+          <label  for="title">Title</label>
+          <input class="inpuPro" type="text" name="title" required>
+          <br>
+          <label for="date">Date</label>
+          <input  class="inpuPro" type="date" name="date" required>
+          <br>
+          <label for="time">Time</label>
+          <input class="inpuPro" type="time" name="time" >
+          <br>
+         
+          <button type="submit">Create Reminder</button>
+        </form>
+        </div>
+
+        
+       <h1>Reminders</h1>
+       <ul class="reminders">
+        <% for(var i = 0; i < reminders.length; i++) { %>
+          <li class="reminder">
+            <strong class="title"><%= reminders[i].title %></strong> - <span class="date"><%= reminders[i].date %></span> <span class="time"><%= reminders[i].time %></span>
+            
+            
+              <label for="reply">Note:</label>
+              <input class="notes" type="text" name="replies">
+              <button class="reply-btn">Make Note</button>
+              <strong style="display: none"><%= reminders[i]._id %></strong>
+            <span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span>
+          </li>
+        <% } %>
+      </ul>
+      <h1>Notes</h1>
+      <ul class="reminders">
+       <% for(var i = 0; i < reminders.length; i++) { %>
+        <% if(reminders[i].replies){ %>
+
+       
+         <li class="reminder">
+           <strong class="title"><%= reminders[i].title %></strong> - <span class="date"><%= reminders[i].date %></span> <span class="time"><%= reminders[i].time %></span> 
+          <p > notes: <%= reminders[i].replies %> </p>
+          
+           <!-- <span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+         </li>
+         <% } %>
+       <% } %>
+     </ul>
+
+
+
+
+
+       
+        <script src="main.js"></script>
+      </body>
+</html>
